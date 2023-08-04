@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700;800&display=swap');
+
+body{
+    font-family: 'Open Sans', sans-serif;
+   /* border : 2px solid black; */
+   text-align: center;
+   padding : 50px;
+   margin-top: 50px; 
+   background-color: rgb(135, 186, 231);
+}
+.add{
+  justify-content: space-between;
+}
+ul{
+    list-style: none;
+}
+
+a{
+  text-decoration: none;
+  
+}
+table {
+  font-style: italic;
+    border-collapse: collapse;
+    width: 50%;
+    border-bottom: 10px;
+   
+  }
+  
+  td, th {
+    border: 1px solid #2d2b2b;
+ 
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #9d7e7e;
+  }
+
+  .myButton {
+	box-shadow: 0px 10px 14px -7px #276873;
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background-color:#599bb3;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+.mainIndex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    padding : 50px;
+    background-color: bisque;
+    border-radius: 30px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.input-container {
+  position: relative;
+}
+
+.input {
+  padding: 10px;
+  height: 40px;
+  border: 2px solid #0B2447;
+  border-top: none;
+  border-bottom: none;
+  font-size: 16px;
+  background: transparent;
+  outline: none;
+  box-shadow: 7px 7px 0px 0px #0B2447;
+  transition: all 0.5s;
+}
+
+.input:focus {
+  box-shadow: none;
+  transition: all 0.5s;
+}
+
+.label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #0B2447;
+  transition: all 0.5s;
+  transform: scale(0);
+  z-index: -1;
+}
+
+.input-container .topline {
+  position: absolute;
+  content: "";
+  background-color: #0B2447;
+  width: 0%;
+  height: 2px;
+  right: 0;
+  top: 0;
+  transition: all 0.5s;
+}
+
+.input-container input[type="text"]:focus ~ .topline {
+  width: 35%;
+  transition: all 0.5s;
+}
+
+.input-container .underline {
+  position: absolute;
+  content: "";
+  background-color: #0B2447;
+  width: 0%;
+  height: 2px;
+  right: 0;
+  bottom: 0;
+  transition: all 0.5s;
+}
+
+.input-container input[type="text"]:focus ~ .underline {
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.input-container input[type="text"]:focus ~ .label {
+  top: -10px;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+.input-container {
+    position: relative;
+  }
+  
+  .input {
+    padding: 10px;
+    height: 40px;
+    border: 2px solid #0B2447;
+    border-top: none;
+    border-bottom: none;
+    font-size: 16px;
+    background: transparent;
+    outline: none;
+    box-shadow: 7px 7px 0px 0px #0B2447;
+    transition: all 0.5s;
+  }
+  
+  .input:focus {
+    box-shadow: none;
+    transition: all 0.5s;
+  }
+  
+  .label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #0B2447;
+    transition: all 0.5s;
+    transform: scale(0);
+    z-index: -1;
+  }
+  
+  .input-container .topline {
+    position: absolute;
+    content: "";
+    background-color: #0B2447;
+    width: 0%;
+    height: 2px;
+    right: 0;
+    top: 0;
+    transition: all 0.5s;
+  }
+  
+  .input-container input[type="text"]:focus ~ .topline {
+    width: 35%;
+    transition: all 0.5s;
+  }
+  
+  .input-container .underline {
+    position: absolute;
+    content: "";
+    background-color: #0B2447;
+    width: 0%;
+    height: 2px;
+    right: 0;
+    bottom: 0;
+    transition: all 0.5s;
+  }
+  
+  .input-container input[type="text"]:focus ~ .underline {
+    width: 100%;
+    transition: all 0.5s;
+  }
+  
+  .input-container input[type="text"]:focus ~ .label {
+    top: -10px;
+    transform: scale(1);
+    transition: all 0.5s;
+  }
+
+  form{
+    margin-top: 40px;
+  }

@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700;800&display=swap');
+
+h3{
+    text-decoration: underline;
+}
+body{
+    text-align: center;
+    
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(135, 186, 231);
+}
+.updateForm{
+  margin-top: 50px;
+ 
+    /* display:flex ;
+    flex-direction: row;
+    align-items:center ;
+    justify-content: center; */
+    height: 60vh;
+}
+ul{
+    border: 3px dashed black;
+    border-radius: 10px;
+    background-color: bisque;
+    display: flex;
+    height: 30vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: space-evenly;
+    justify-content: space-evenly;
+    list-style: none;
+    border: 1px solid black;
+    margin-top: 10px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+   
+}
+li{
+    /* line-height: 1px; */
+    background-color: rgb(244, 238, 231);
+    border: 1px solid black;
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    border-radius: 5px;
+    height: fit-content;
+    
+}
+.myButton {
+	box-shadow: 0px 10px 14px -7px #276873;
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background-color:#599bb3;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=habit.name %>-Habit Tracker App</title>
+    <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+    <h3><%= habit.name %> Habit Tracker</h3>
+
+    <h4>Status of the last 7 Days</h4>
+
+        <form method="POST" action="/habit/<%= habit._id %>" class="updateForm">
+    
+            <ul>
+                <% for (let i = 6; i >= 0; i--) { %> 
+    
+                    <% const date = new Date() %>
+                    <% date.setDate(date.getDate() - i ) %>
+                    <% const historyEntry = habit.history.find(entry => entry.date.toDateString() === date.toDateString()) %>
+                    <% const status = historyEntry ? historyEntry.status : 'None' %>
+                    <li>
+                        <%= date.toDateString() %> : <%= status %>
+                        <select name="<%= date.toISOString() %>" id="status">
+                            <option value="Done" <%= status === 'Done' ? 'selected' : '' %>>Done</option>
+                            <option value="Not done" <%= status === 'Not done' ? 'selected' : '' %> >Not Done</option>
+                            <option value="None" <%= status === 'None' ? 'selected' : '' %>>None</option>
+                        </select>
+                    </li>
+                <% } %>
+            </ul>
+            <button type="submit" class="myButton">Update</button>
+        </form>   
+    </body>
+    </html>
+    
+</body>
+</html>

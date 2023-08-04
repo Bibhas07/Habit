@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Habit Tracker App </title>
+    <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla-framework-version-4.0.0.min.css" />
+    <link rel="stylesheet" href="/index.css">
+  
+</head>
+<body>
+    <div class="mainIndex">
+       
+    <h1> <i class="p-icon--copy"></i>Habit Tracker</h1>
+    <h2>Current Habit</h2>
+    <table>
+        <tr>
+            <th>Habit Name </th>
+            <th>Status</th>
+            <th>Delete Habit</th>
+        </tr>
+        <% habits.forEach(habit => { %>
+        <tr>
+           
+                <td><%= habit.name %></td>
+                <td> <a href="/habit/<%=habit._id %> ">View Status</a> </td>    
+                <td><a href="/delete/<%=habit._id %> ">Delete</a> </td>     
+                                
+        </tr>
+        <% })  %></th>
+    </table>
+    <!-- <ul>
+        <% habits.forEach(habit => { %>
+            <li><%= habit.name %>
+                <a href="/habit/<%=habit._id %> ">View Status</a>            
+            </li>    
+        <% })  %>
+
+    </ul>    -->
+   
+    <form action="/add" method="POST" class="add">
+        <input type="text" name="habit" id="" placeholder="Enter Habit" class="input"> 
+        <label class="label" for="input">Add New Habit</label>
+        <button type="submit" class="myButton">Add</button>
+    </form>
+</div>
+</body>
+</html>
